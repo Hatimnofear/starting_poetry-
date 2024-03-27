@@ -1,6 +1,14 @@
-def my_first_function()->str:
-    return "Hello World"
+# main.py
+from fastapi import FastAPI
 
-result : str = my_first_function()
+app =  FastAPI()
+    
+# simple get request to test
+@app.get("/")
+def read_root():
+    return {"Hello" : "World"}
 
-print(result)
+# read all todos from the database
+@app.get("/city")
+def city():
+    return {"City" : "Lahore"}

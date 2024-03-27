@@ -4,6 +4,8 @@
 
 ## Commands on terminal
 
+## First Day work
+
 (base) PS C:\Users\Batch 37 PIAIC> cd generative-ai
 (base) PS C:\Users\Batch 37 PIAIC\generative-ai> dir
 
@@ -146,7 +148,7 @@ Hint: make sure your test modules/packages have valid Python names.
 Traceback:
 C:\Python312\Lib\importlib\__init__.py:90: in import_module
     return_bootstrap._gcd_import(name[level:], package, level)
-tests\test_myproject.py:1: in <module>
+tests\test_myproject.py:1: in ## <module>
     from project_001 import main
 E   ModuleNotFoundError: No module named 'project_001'
 =============================================== short test summary info ===============================================
@@ -164,3 +166,98 @@ tests\test_myproject.py ..                                                      
 
 ================================================== 2 passed in 0.05s ==================================================
 (base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app>
+
+## Second Day work
+
+(base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> poetry version
+too-do-app 0.1.0
+(base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> poetry run python --version
+Python 3.12.2
+(base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> poetry add fastapi "uvicorn[standard]"
+Using version ^0.110.0 for fastapi
+Using version ^0.29.0 for uvicorn
+
+Updating dependencies
+Resolving dependencies... (16.1s)
+
+Package operations: 16 installs, 0 updates, 0 removals
+
+- Installing sniffio (1.3.1)
+- Installing typing-extensions (4.10.0)
+- Installing annotated-types (0.6.0)
+- Installing anyio (4.3.0)
+- Installing pydantic-core (2.16.3)
+- Installing click (8.1.7)
+- Installing h11 (0.14.0)
+- Installing pydantic (2.6.4)
+- Installing python-dotenv (1.0.1)
+- Installing pyyaml (6.0.1)
+- Installing starlette (0.36.3)
+- Installing watchfiles (0.21.0)
+- Installing websockets (12.0)
+- Installing fastapi (0.110.0)
+- Installing uvicorn (0.29.0)
+
+Writing lock file
+(base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> poetry add sqlmodel
+Using version ^0.0.16 for sqlmodel
+
+Updating dependencies
+Resolving dependencies... (3.1s)
+
+Package operations: 3 installs, 0 updates, 0 removals
+
+- Installing greenlet (3.0.3)
+- Installing sqlalchemy (2.0.29)
+- Installing sqlmodel (0.0.16)
+
+Writing lock file
+
+PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> pip install todo
+Collecting todo
+  Downloading todo-0.1.tar.gz (2.1 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Building wheels for collected packages: todo
+  Building wheel for todo (pyproject.toml) ... done
+  Created wheel for todo: filename=todo-0.1-py3-none-any.whl size=2671 sha256=6df0f74d362724c027d5ed0dd9e753c53f0ce0ce824573a9012a870e7812e0d5
+  Stored in directory: c:\users\batch 37 piaic\appdata\local\pip\cache\wheels\0f\6e\a4\849e1c5a38e32ace6f07eba948b4dd261887768ff05b452db2
+Successfully built todo
+Installing collected packages: todo
+Successfully installed todo-0.1
+
+## Third Day work
+
+(base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> ls
+
+    Directory: C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app
+
+Mode                 LastWriteTime         Length Name
+d-----         3/27/2024   9:31 PM                .mypy_cache
+d-----         3/25/2024   2:06 AM                .pytest_cache
+d-----         3/25/2024   2:08 AM                tests
+d-----         3/25/2024   2:17 AM                too_do_app
+-a----         3/25/2024   1:46 AM             66 .gitattributes
+-a----         3/26/2024  12:58 AM         103606 poetry.lock
+-a----         3/26/2024   1:08 AM            426 pyproject.toml
+-a----         3/26/2024   1:26 AM           9753 README.md
+
+(base) PS C:\Users\Batch 37 PIAIC\generative-ai\assignment\too-do_app> poetry run uvicorn too_do_app.main:app --reload
+INFO:     Will watch for changes in these directories: ['C:\\Users\\Batch 37 PIAIC\\generative-ai\\assignment\\too-do_app']
+INFO:     Uvicorn running on <http://127.0.0.1:8000> (Press CTRL+C to quit)
+INFO:     Started reloader process [12672] using WatchFiles
+INFO:     Started server process [17728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:63115 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63124 - "GET /city HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63181 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63181 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63214 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63224 - "GET /city HTTP/1.1" 200 OK
